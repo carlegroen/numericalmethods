@@ -2,12 +2,11 @@ import matplotlib.pyplot as mp
 import numpy as np
 import interpolation as inter
 
-data = np.loadtxt('test.dat')
-
-x = data[:,0]
-y = data[:,1]
+x = np.linspace(0,10,10)
+y = [0,0,0,0,0,1,1,1,1,1]
 z = np.linspace(x[0],len(x),100)
-mp.plot(x,y,'bo',label='Given points')
+mp.plot(x,y,'bo')
+
 
 # polynomial interpolation
 f1 = inter.pinterp(x,y,z)
@@ -27,4 +26,7 @@ mp.plot(z,f3,label='Quadratic interpolation')
 legend = mp.legend(loc='upper left', shadow=True, fontsize='large')
 
 # saving figure
-mp.savefig('test.png',format='png')
+mp.savefig('stepwise.png',format='png')
+
+# prints text in command line
+print 'Figures saved as .png'
