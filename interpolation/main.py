@@ -1,6 +1,7 @@
 import matplotlib.pyplot as mp
 import numpy as np
 import interpolation as inter
+np.seterr(divide='ignore', invalid='ignore')
 
 data = np.loadtxt('test.dat')
 

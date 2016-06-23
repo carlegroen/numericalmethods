@@ -1,6 +1,7 @@
 from __future__ import division
 import numpy as np
 import search
+np.seterr(divide='ignore', invalid='ignore')
 
 
 # Polynomial
