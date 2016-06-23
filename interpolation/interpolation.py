@@ -1,22 +1,9 @@
 from __future__ import division
 import numpy as np
+import search
 
-#
-# BINARY SEARCH
-#
 
-def bin(x,z):
-	low=0
-	high=len(x)-1
-	while high-low>1:
-		mid=int(round((high+low)/2))
-		if z >= x[mid]:	low=mid
-		else: high=mid
-	return low
-
-#
-# POLYNOMIAL INTERPOLATION
-#
+# Polynomial
 
 def pinterp(x,y,z):
 	ps=0
@@ -28,9 +15,7 @@ def pinterp(x,y,z):
 		ps+=y[i]*p
 	return ps
 
-#
-# LINEAR SPLINE INTERPOLATION
-#
+#Linear spline
 
 def linterp(x,y,z):
 	ls=np.zeros(len(z))
@@ -44,9 +29,8 @@ def linterp(x,y,z):
 		ls[j] = y[l]+(dy[l]/dx[l])*(z[j]-x[l])
 	return ls
 
-#
-# QUADRATIC SPLINE INTERPOLATION
-#
+
+# Quadratic spline
 
 def qinterp(x,y,z):
 	qs=np.zeros(len(z))
