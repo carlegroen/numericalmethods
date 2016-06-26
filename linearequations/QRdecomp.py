@@ -2,7 +2,7 @@ from __future__ import division
 import math
 import numpy as np
 
-def qrdec(A):
+def QRdec(A):
     m = np.shape(A)[0]
     n = np.shape(A)[1]
     Q = np.zeros((m,n))
@@ -24,7 +24,7 @@ def qrdec(A):
 
     return Q,R
 
-def qrback(Q,R,b):
+def QRback(Q,R,b):
     n = np.shape(Q)[1]
     c = np.zeros(n)
     x = np.zeros(n)
@@ -38,7 +38,7 @@ def qrback(Q,R,b):
         x[i] = (c[i]-rx)/R[i,i]
     return x
 
-def qrdet(Q,R):
+def QRdet(Q,R):
 	m = np.shape(Q)[0]
 	n = np.shape(Q)[1]
 	det = 1
@@ -50,7 +50,7 @@ def qrdet(Q,R):
 			detR = np.absolute(det)
 	return detR
 
-def qrinverse(Q,R):
+def QRinverse(Q,R):
 	m = np.shape(Q)[0]
 	n = np.shape(Q)[1]
 	Ainverse = np.zeros(np.shape(Q))
@@ -60,5 +60,5 @@ def qrinverse(Q,R):
 		else:
 			x = np.zeros(n)
 			x[i] = 1
-			Ainverse[:,i] = qrback(Q,R,x)
+			Ainverse[:,i] = QRback(Q,R,x)
 	return Ainverse

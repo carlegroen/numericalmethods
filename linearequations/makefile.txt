@@ -1,0 +1,17 @@
+all: A B
+
+A: outputA.txt
+	cat $<
+
+outputA.txt: mainA.py QR.py makefile.txt
+	python $< > $@
+
+B: outputB.txt
+	cat $<
+
+outputB.txt: mainB.py givens.py makefile.txt
+	python $< > $@
+
+clean:
+	rm -rf __pycache__
+	rm -r outputA.txt outputB.txt
