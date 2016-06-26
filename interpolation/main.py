@@ -10,18 +10,13 @@ y = data[:,1]
 z = np.linspace(x[0],len(x),100)
 mp.plot(x,y,'bo',label='Given points')
 
-# polynomial interpolation
-f1 = inter.pinterp(x,y,z)
-mp.plot(z,f1,label='Polynomial interpolation')
-
-
 # linear spline interpolation
-f2 = inter.linterp(x,y,z)
+f1 = inter.linterp(x,y,z)
 mp.plot(z,f2,label='Linear interpolation')
 
 
 # quadratic spline interpolation
-f3 = inter.qinterp(x,y,z)
+f2 = inter.qinterp(x,y,z)
 mp.plot(z,f3,label='Quadratic interpolation')
 
 # move legend to upper left, add shadows

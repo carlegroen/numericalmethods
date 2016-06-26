@@ -3,20 +3,7 @@ import numpy as np
 import search
 np.seterr(divide='ignore', invalid='ignore')
 
-
-# Polynomial
-
-def pinterp(x,y,z):
-	ps=0
-	for i in range(len(x)):
-		p=1
-		for k in range(len(x)):
-			if k!=i:
-				p*=(z-x[k])/(x[i]-x[k])
-		ps+=y[i]*p
-	return ps
-
-#Linear spline
+# Linear spline
 
 def linterp(x,y,z):
 	ls=np.zeros(len(z))
