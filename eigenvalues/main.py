@@ -4,7 +4,7 @@ import numpy as np
 import sys
 from numpy import linalg as LA
 
-A    = np.array([[1.0,6.0,3.0],[6.0,4.0,-5.0],[3.0,-5.0,6.0]])
+A    = np.array([[2.0,12.0,6.0],[12.0,8.0,-10.0],[6.0,-10.0,12.0]])
 Aorg = np.copy(A)
 print "Un-changed matrix A:"
 print A
