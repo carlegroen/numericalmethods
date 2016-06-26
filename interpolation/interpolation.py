@@ -21,11 +21,11 @@ def linterp(x,y,z):
 # Quadratic spline
 
 def qinterp(x,y,z):
-	qs=np.zeros(len(z))
-	dx=np.zeros(len(x))
-	dy=np.zeros(len(x))
-	a1=np.zeros(len(x))
-	a2=np.zeros(len(x))
+	qs = np.zeros(len(z))
+	dx = np.zeros(len(x))
+	dy = np.zeros(len(x))
+	a1 = np.zeros(len(x))
+	a2 = np.zeros(len(x))
 	a1[0]=0
 	a2[-1]=0
 	for i in range(len(x)-1):
