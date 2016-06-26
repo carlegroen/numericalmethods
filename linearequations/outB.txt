@@ -40,5 +40,5 @@ Givens rotation of A
  [-0.64350111  2.76108628  0.91287093]
  [ 0.          0.74832717  1.15180624]]
 200 x 200 matrix speed-test:
-Gram-Schmidt decomposition solved in: 0.491161823273 seconds
-Givens solved in: 12.0442500114 seconds
+Gram-Schmidt decomposition solved in: 0.487129926682 seconds
+Givens solved in: 12.3807220459 seconds
