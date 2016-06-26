@@ -12,11 +12,11 @@ mp.plot(x,y,'bo',label='Given points')
 
 # linear spline interpolation
 f1 = inter.linterp(x,y,z)
-mp.plot(z,f2,label='Linear interpolation')
+mp.plot(z,f1,label='Linear interpolation')
 
 # quadratic spline interpolation
 f2 = inter.qinterp(x,y,z)
-mp.plot(z,f3,label='Quadratic interpolation')
+mp.plot(z,f2,label='Quadratic interpolation')
 
 # move legend to upper left, add shadows
 legend = mp.legend(loc='upper left', shadow=True, fontsize='large')
