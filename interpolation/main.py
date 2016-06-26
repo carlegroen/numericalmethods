@@ -14,7 +14,6 @@ mp.plot(x,y,'bo',label='Given points')
 f1 = inter.linterp(x,y,z)
 mp.plot(z,f2,label='Linear interpolation')
 
-
 # quadratic spline interpolation
 f2 = inter.qinterp(x,y,z)
 mp.plot(z,f3,label='Quadratic interpolation')
