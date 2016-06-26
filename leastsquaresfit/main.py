@@ -18,17 +18,17 @@ def f5(x):
 f = [f1,f2,f3,f4,f5]
 
 #generate 100 random pts to fit with least squares
-x = np.random.rand(30)*10
+x    = np.random.rand(30)*10
 x.sort()
-y = np.cos(x)+np.sin(x)-np.sqrt(x)+np.exp(x/5)
-dy = np.random.random(len(x))
+y    = np.cos(x)+np.sin(x)-np.sqrt(x)+np.exp(x/5)
+dy   = np.random.random(len(x))
 c1,S1 = lsfit(x,y,dy,f)
 
-pts = np.linspace(min(x),max(x),100)
-fit1 = np.zeros(len(pts))
+pts    = np.linspace(min(x),max(x),100)
+fit1   = np.zeros(len(pts))
 fit1pc = np.zeros(len(pts))
 fit1mc = np.zeros(len(pts))
-dc=np.zeros(len(f))
+dc     = np.zeros(len(f))
 for k in range(len(f)):
 	fit1 += c1[k]*f[k](pts)
 
