@@ -1,0 +1,14 @@
+Starting points= [-5.  6.]
+Minimum of Rosenbrock's valley function:
+[ 1.  1.]
+steps used:
+37
+
+
+Starting points= [-4.  8.]
+Minimum of Himmelblau function:
+[-2.82586177  3.70575162]
+steps used:
+16
+
+
