@@ -5,23 +5,22 @@ from LSbyQR import *
 
 
 def f1(x):
-	return np.sin(x)
+	return 1/x
 def f2(x):
-	return np.cos(x)
+	return 1
 def f3(x):
-	return np.sqrt(x)
-def f4(x):
-	return np.exp(x)
-def f5(x):
 	return x
+#def f4(x):
+#	return np.exp(x)
+#def f5(x):
+#	return x
 
-f = [f1,f2,f3,f4,f5]
+f = [f1,f2,f3]
 
-#generate 100 random pts to fit with least squares
-x    = np.random.rand(30)*10
-x.sort()
-y    = np.cos(x)+np.sin(x)-np.sqrt(x)+np.exp(x/5)
-dy   = np.random.random(len(x))
+x    = [ 0.100, 0.145, 0.211, 0.307, 0.447, 0.649, 0.944, 1.372, 1.995, 2.900]
+#x.sort()
+y    = [ 12.644, 9.235, 7.377, 6.460, 5.555, 5.896, 5.673, 6.964, 8.896, 11.355]
+dy   = [ 0.858, 0.359, 0.505, 0.403, 0.683, 0.605, 0.856, 0.351, 1.083, 1.002]
 c1,S1 = lsfit(x,y,dy,f)
 
 pts    = np.linspace(min(x),max(x),100)
