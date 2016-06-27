@@ -1,0 +1,28 @@
+Integral of x^3 from 0 to 1
+Exact result:
+0.25
+The closed sets integral is:
+0.25
+# of integrand calls: 16383
+Estimated error:
+0.00092071195467
+The open sets integral is:
+0.25
+# of integrand calls: 1023
+Estimated error:
+0.00092071195467
+
+
+Integral of 4*sqrt(1-(1-x)^2) from 0 to 1
+Exact result:
+3.14159265359
+The closed sets integral is:
+3.03224755112
+# of integrand calls: 263166
+Estimated error is
+0.000950402660498
+The open sets integral is:
+3.17715548349
+# of integrand calls= 8191
+Estimated error is
+0.000778025721386

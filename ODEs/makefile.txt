@@ -1,0 +1,11 @@
+all: A
+
+A: outputA.txt
+	cat $<
+
+outputA.txt: mainA.py runge.py makefile.txt
+	python $< > $@
+
+clean:
+	rm -rf __pycache__
+	rm -r outputA.txt
