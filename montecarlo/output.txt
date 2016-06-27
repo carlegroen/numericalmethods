@@ -1,0 +1,9 @@
+Monte Carlo integration:
+Calculate the integral cos(x)*y^2 from 0 to pi/2 and 0 to 3
+Monte Carlo with N from 10^1 to 10^7:
+[ 12.48952695   7.66080853   9.43715543   9.03091819   8.97773039
+   9.00652473]
+Exact result: 9
+Calculate the integral given in the assignment
+Monte carlo with N=10^7: 1.39762749001
+The result given is 1.39320392969
