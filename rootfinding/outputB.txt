@@ -1,0 +1,44 @@
+Roots of A*x*y-1 and exp(-x)+exp(-y)-1.-1./A, A=10000
+Startpoints= [ 1. -1.]
+Numerical estimate of the jacobian
+Roots= [  9.10614674e+00   1.09815933e-05]
+Number of call to function
+1002
+
+
+User supplied jacobian
+Roots= [  9.10614674e+00   1.09815933e-05]
+Number of call to function
+880
+
+
+Roots of Rosenbrock's valley function
+Startpoints= [-1.  4.]
+Numerical estimate of the jacobian
+Roots= [ 1.  1.]
+Number of call to function
+12
+
+
+User supplied jacobian
+Startpoints= [-1.  4.]
+Roots= [ 1.  1.]
+Number of call to function
+3
+
+
+Roots of Himmelblau function
+Startpoints= [ 2. -7.]
+Numerical estimate of the jacobian
+Roots= [-0.27084459 -0.92303856]
+Number of call to function
+24
+
+
+User supplied jacobian
+Startpoints= [ 2. -7.]
+Roots= [-0.27084459 -0.92303856]
+Number of call to function
+18
+
+
