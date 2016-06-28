@@ -17,7 +17,7 @@ j = 0
 
 for i in range(len(x)):
     for j in range(len(y)):
-        F[j][i] = x[i]*y[j]
+        F[j][i] = 2*x[i]*y[j]
 
 Flist = np.ravel(F)
 
@@ -32,16 +32,11 @@ i = 0
 for i in range(len(Flist)):
     n[i][2] = Flist[i]
 
-px = 0.01
-k = 0
-l = 0
 kappa = np.zeros((100,100))
 pxx = np.zeros(600)
 pyy = np.zeros(600)
 
 count = 0
-
-
 px = 0.01
 
 while px < 1:
@@ -51,9 +46,7 @@ while px < 1:
         #print count
         count += 1
         kappa[px*100,py*100] = bilin.bilinear(x, y, F, px, py)
-        print py
         py += 0.01
-    print px
     px += 0.01
 
 print kappa
@@ -64,11 +57,13 @@ print kappa
 # yvals = column(n,1)
 # Fvals = column(n,2)
 
+plt.figure(1)
 plt.contourf(x,y,F)
 plt.colorbar()
 plt.savefig('noninterpolated.png',format='png')
 
-plt.contourf(np.linspace(0,1,100),np.linspace(0,1,100),kappa)
+plt.figure(2)
+plt.contourf(np.linspace(0,1,100),np.linspace(0,1,100),kappa,100)
 plt.savefig('interpolated.png',format='png')
 
 
