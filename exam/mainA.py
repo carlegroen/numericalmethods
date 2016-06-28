@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import bilinearinterpolation as bilin
-import bilinear_interpolation as bilinear
 np.seterr(divide='ignore', invalid='ignore')
 
 x = np.array([0,1])
