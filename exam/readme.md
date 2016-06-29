@@ -4,7 +4,7 @@ Bi-linear interpolation is done by constructing a function that passes through g
 
 A rectilinear grid is a set of rectangles that aren't all congruent to eachother. The cells can still be indexed in vectors, however, the spacing between points are not regular. Logarithmic scales are examples of non-cartesian grids, and it is often used as an example of rectilinear grids.
 
-*Part A*
+##Part A
 
 For exercise A, a four-point system with one F-value given at a corner is plotted.
 
@@ -16,7 +16,7 @@ With the bi-linear interpolation algorithm constructed applied:
 
 ![alt tag](https://github.com/carlegroen/numericalmethods/raw/master/exam/interpolated.png)
 
-**Part B**
+##Part B
 
 For a rectilinear grid with a given F matrix as a function, the non-interpolated grid is seen below:
 
