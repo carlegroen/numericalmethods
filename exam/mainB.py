@@ -57,7 +57,6 @@ while px < max(x):
     px += steplength
     countx +=1
 
-
 #Plots non-interpolated figure
 plt.figure(1)
 plt.contourf(x,y,F)

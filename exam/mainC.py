@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import bicubicinterpolation as bicubic
 np.seterr(divide='ignore', invalid='ignore')
+np.set_printoptions(threshold=np.nan)
+
 
 x = np.array([0,1,2,3])
 y = np.array([0,1,2,3])
