@@ -45,9 +45,11 @@ while px < 1:
 plt.figure(1)
 plt.contourf(x,y,F)
 plt.colorbar()
+plt.title('Non-interpolated dataset')
 plt.savefig('noninterpolated.png',format='png')
 
 plt.figure(2)
 plt.contourf(np.linspace(0,1,100),np.linspace(0,1,100),kappa,len(kappa))
 plt.colorbar()
+plt.title('Bilinear interpolation')
 plt.savefig('interpolated.png',format='png')

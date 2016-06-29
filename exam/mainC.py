@@ -10,16 +10,17 @@ ny = len(y)
 F = np.zeros((nx,ny))
 n = np.zeros((nx*ny,3))
 steplength = 0.02
-kappa = np.zeros((1/steplength,1/steplength))
+interplength = 1.36
+kappa = np.zeros((interplength/steplength,interplength/steplength))
 
 i = 0
 j = 0
 
 #Define F matrix given a function. Here, it is sqrt(x^2+y^2)
 
-for i in range(len(x)):
-    for j in range(len(y)):
-        F[j][i] = np.sqrt(x[i]*x[i]+y[j]*y[j])
+# for i in range(len(x)):
+#     for j in range(len(y)):
+#         F[j][i] = np.sqrt(x[i]*x[i]+y[j]*y[j])
 
 #Defining F after a matrix with known looks
 
@@ -52,11 +53,11 @@ print qqqq
 count = 0
 px = 0
 countx = 0
-while px < 1:
+while px < interplength:
     county = 0
     count = 1
     py = 0
-    while py < 1:
+    while py < interplength:
         #print count
         count += 1
         kappa[countx,county] = bicubic.bicubiceval(px, py, F)[1]
@@ -65,16 +66,9 @@ while px < 1:
     px += steplength
     countx +=1
 
-
-
-#Plots non-interpolated figure
-plt.figure(1)
-plt.contourf(x,y,F)
-plt.colorbar()
-plt.savefig('noninterpolatedPartC.png',format='png')
-
 #Plots interpolated figure
 plt.figure(2)
+plt.title('Bicubic interpolation')
 plt.contourf(np.linspace(min(x),max(x),countx),np.linspace(min(y),max(y),county),kappa,len(kappa))
 plt.colorbar()
 plt.savefig('interpolatedPartC.png',format='png')

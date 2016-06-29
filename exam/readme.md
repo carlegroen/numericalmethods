@@ -24,3 +24,9 @@ For a rectilinear grid with a given F matrix as a function, the non-interpolated
 
 And with the interpolation algorithm applied:
 ![alt tag](https://github.com/carlegroen/numericalmethods/raw/master/exam/interpolatedPartB.png)
+
+##Part C
+
+As an added bonus, a bicubic interpolation was created as well. The dataset is equivalent to the one in Part B:
+
+![alt tag](https://github.com/carlegroen/numericalmethods/raw/master/exam/interpolatedPartC.png)

@@ -64,10 +64,12 @@ while px < max(x):
 plt.figure(1)
 plt.contourf(x,y,F)
 plt.colorbar()
+plt.title('Non-interpolated dataset')
 plt.savefig('noninterpolatedPartB.png',format='png')
 
 #Plots interpolated figure
 plt.figure(2)
 plt.contourf(np.linspace(min(x),max(x),countx),np.linspace(min(y),max(y),county),kappa,len(kappa))
 plt.colorbar()
+plt.title('Bilinear interpolation')
 plt.savefig('interpolatedPartB.png',format='png')
