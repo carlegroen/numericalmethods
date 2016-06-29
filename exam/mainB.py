@@ -21,8 +21,6 @@ for i in range(len(x)):
     for j in range(len(y)):
         F[j][i] = np.sqrt(x[i]*x[i]+y[j]*y[j])
 
-print F
-
 #Defining F after a matrix with known looks
 F[0][0] = 1.0
 F[1][0] = 3.0

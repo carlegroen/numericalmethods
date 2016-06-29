@@ -1,0 +1,24 @@
+all: A B C
+
+A: outA.txt
+	cat $<
+
+outA.txt: mainA.py bilinearinterpolation.py makefile.txt
+	python $< > $@
+
+B: outB.txtz
+	cat $<
+
+outB.txt: mainB.py bilinearinterpolation.py makefile.txt
+	python $< > $@
+
+C: outC.txt
+	cat $<
+
+outC.txt: mainC.py bicubicinterpolation.py makefile.txt
+	python $< > $@
+
+clean:
+	rm -rf __pycache__
+	rm -r outA.txt outB.txt outC.txt
+	rm -f noninterpolated.png interpolated.png noninterpolatedPartB.png interpolatedPartB.png interpolatedPartC.png

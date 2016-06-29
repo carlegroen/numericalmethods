@@ -4,7 +4,7 @@ import search
 np.seterr(divide='ignore', invalid='ignore')
 
 def cinterp(p, a):
-	return p[1] + 0.5 * a*(p[2] - p[0] + a*(2.0*p[0] - 5.0*p[1] + 4.0*p[2] - p[3] + a*(3.0*(p[1] - p[2]) + p[3] - p[0])))
+	return p[1] + 0.5 * a * (p[2] - p[0] + a * (2.0 * p[0] - 5.0*p[1] + 4.0*p[2] - p[3] + a*(3.0*(p[1] - p[2]) + p[3] - p[0])))
 
 def bicubiceval(x,y,p):
 	interp = np.zeros((4,4))

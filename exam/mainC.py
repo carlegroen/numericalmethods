@@ -41,14 +41,6 @@ F[1][3] = 3.0
 F[2][3] = 2.0
 F[3][3] = 3.0
 
-print "F"
-print F
-print "F(1,0)"
-print F[0][:]
-qqqq = bicubic.bicubiceval(3,3, F)
-print "qqqq"
-print qqqq
-
 #Starts performing the bilinear interpolation in correct sequence
 count = 0
 px = 0
